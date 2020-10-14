@@ -29,9 +29,9 @@ class ProductTest < Minitest::Test
   end
 
   def test_it_can_add_new_products
-    #this and add_product method aren't working, need to be revisited
-# binding.pry
-    assert_equal @product1, @cart.add_product(@product1)
-    assert_equal @product2, @cart.add_product(@product2)
+    @cart.add_product(@product1)
+    @cart.add_product(@product2)
+
+    assert_equal [@product1, @product2], @cart.products
   end
 end
