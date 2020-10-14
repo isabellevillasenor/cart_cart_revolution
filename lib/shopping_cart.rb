@@ -1,3 +1,4 @@
+require 'pry'
 class ShoppingCart
   attr_accessor :products
 
@@ -10,7 +11,7 @@ class ShoppingCart
     @products = []
   end
 
-  def add_product(cart)
-    @products << cart
+  def add_product(products)
+    @products << products
   end
 end
