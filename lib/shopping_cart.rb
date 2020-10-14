@@ -1,6 +1,7 @@
 require 'pry'
 class ShoppingCart
-  attr_accessor :products
+  attr_accessor :products,
+                :cart
 
   attr_reader :name,
               :capacity
@@ -9,9 +10,10 @@ class ShoppingCart
     @name = name
     @capacity = capacity.to_i
     @products = []
+    @cart = cart
   end
 
   def add_product(products)
-    @products << products
+    @cart << products
   end
 end
